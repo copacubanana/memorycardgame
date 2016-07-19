@@ -52,7 +52,7 @@ function gameOver() {
 /* ======== Resets timer and number of matches === */
 
 function resetCounterAndMatches() {
-	count = 5; // count for the startTimer() myTimer()
+	count = 30; // count for the startTimer() myTimer()
 	numberOfMatches = 0; // number of correctly matched pairs
 }
 
@@ -82,10 +82,6 @@ function startTimer() {
 		}
 }
 
-function initialTime() {
-	
-}
-
 /* ======== randomizeCards() assigns a randomly generated image to each card ========== */ 
 
 function randomizeCards() {
@@ -105,13 +101,13 @@ function randomizeCards() {
 	}
 }
 
-/* ======== turnBackCards() combined with reset(); turns cards to the back ================ */
+/* ======== turnoverCards() combined with reset(); turns cards to the back ================ */
 
 function turnoverCards() {
 	var matchCards = document.getElementsByClassName('match'); // find all the backs of cards class="match"
 	var i = 0;
-	for ( i ; i < matchCards.length ; i++ ) {
-		matchCards[i].className = 'back'; 
+	while (matchCards.length) {
+		matchCards[0].className = 'back';
 	}
 }
 
@@ -122,7 +118,6 @@ function turnoverCards() {
 	elStartButton.addEventListener('click', startTimer, false);
 	elStartButton.addEventListener('click', randomizeCards, false);
 	elStartButton.addEventListener('click', canClick, false);
-	// elStartButton.addEventListener('click', turnoverCards, false);
 	elStartButton.addEventListener('click', cardsContainerChange, false);
 	elStartButton.addEventListener('click', resetCounterAndMatches, false);
 
@@ -142,8 +137,6 @@ function canClick() {
 
 var countShowCard = 0;
 var cardOne, cardTwo = undefined;
-
-
 
 function getTarget(e) {
 	return e.target;
