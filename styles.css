@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* ====================================== Timer =================================== */
+
+h1 {
+	font-family: 'Lucida Console', cursive;
+	font-size: 3em;
+	color: navy;
+	text-align: center;
+	text-shadow: 2px 2px 5px gray;
+	padding: 0;
+	
+}
+
+.timercontainer {
+	border: .1em solid navy;
+	border-radius: .5em;
+	background-color: linen;
+	font-family: 'Lucida Console', cursive;
+	color: navy;
+	font-size: 2em;
+	text-align: center;
+	height: 2em;
+	width: 8em;
+	margin: .75em auto;
+	padding: .1em .5em;
+
+}
+
+#timer {
+	
+	border: 1px solid gray;
+}
+
+#timeleft {
+	font-weight: 900;
+}
+
+#totalMatches {
+	font-weight: 900;
+}
+
+/* ============================ Directions / Gameover =================================== */
+
+#directions, #gameover, #congratulations {
+	border: .5em double navy;
+	border-radius: .5em;
+	background-color: #FFF8C6;
+	box-shadow: 2px 2px 5px darkgray;
+	height: 10em;
+	width: 24em;
+	padding: 1em;
+	position: absolute;
+	top: 30%;
+	left: 26em;
+	font-family: Helvetica;
+	font-size: .9em;
+	color: navy;
+}
+
+#gameover, #congratulations {
+	visibility: hidden;
+}
+
+#startbutton, #tryagainbutton {
+	position: relative;
+	padding: .25em;
+	margin: 1em auto;
+	border-radius: .5em;
+	font-size: 1.25em;
+	background-color: navy;
+	color: white;
+	box-shadow: none;
+	text-shadow: 2px 2px 2px gray;
+}
+
+#startbutton:hover, #tryagainbutton:hover {
+	background-color: #2B3856;
+	box-shadow: 2px 2px 2px gray;
+}
+
+/* ======================================== Cards =================================== */
+
+
+#cardscontainer {
+	width: 63em;
+	margin: 0 auto;
+	border: .25em double darkgray;
+}
+
+#gameovercardscontainer {
+	width: 63em;
+	margin: 0 auto;
+	border: .25em double darkgray;
+}
+
+ .row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+div.back {
+	z-index: 1;
+	background-color: navy;
+	border-radius: 1em;
+	margin: 0;
+	height: 10em;
+	width: 10em;
+	display: block;
+	float: left;
+	visibility: visible;
+}
+
+div.back:hover {
+	background-color: #737CA1;
+}
+
+div.card {
+	z-index: -1;
+	border: 3px solid gray;
+	border-radius: 1em;
+	margin: .2em;
+	height: 10em;
+	width: 10em;
+	display: block;
+	float: left;
+}
+
+div.flippedOne, div.flippedTwo, div.match {
+	visibility: hidden;
+}
+
+
+
+
